@@ -1,0 +1,115 @@
+.carousel {
+  padding: .3em .3em 0;
+  background: rgb(240, 240, 240);
+  text-align: center;
+}
+
+.carousel div {
+  position: relative;
+  margin-bottom: .3em;
+}
+
+.carousel span {
+  display: inline-block;
+  word-spacing: 1em;
+  /* расстояние между картинками */
+  /* прокрутка миниатюр при необходимости */
+  overflow: auto;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.carousel a {
+  position: relative;
+  display: inline-block;
+  max-width: 120px;
+  /* максимальная ширина миниатюр */
+  width: 25%;
+  /* ширина миниатюр */
+  border: 1px solid blue;
+  /* рамка вокруг миниатюр */
+  opacity: .7;
+  text-decoration: none;
+}
+
+.carousel a:visited, .carousel a:nth-of-type(1) {
+  border-color: #555;
+  /* рамка вокруг миниатюр просмотренных видео */
+}
+
+.carousel a:hover {
+  opacity: 1;
+}
+
+.carousel a:not(:active):focus {
+  pointer-events: none;
+}
+
+.carousel a::before {
+  content: "";
+  position: absolute;
+  top: 0em;
+  right: 0em;
+  bottom: 0em;
+  left: 0em;
+  background: rgba(0, 0, 1, .1);
+  transition: background 0s 9999999s;
+}
+
+.carousel span:active a::before {
+  background: rgba(0, 0, 0, 0);
+  transition: background 0s;
+}
+
+.carousel span:active a:active::before {
+  border: 2px solid black;
+  transition: background 0s;
+}
+
+.carousel img {
+  max-width: 100%;
+  vertical-align: middle;
+  /* убрать нижний отступ до рамки под картинкой */
+}
+
+.com {
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 915px;
+}
+
+.f_c {
+  border: 1px solid black;
+  width: 915px;
+  background: rgb(240, 240, 240);
+  padding: 5px;
+}
+
+input[type="text"] {
+  width: 915px;
+  border: 1px solid black;
+  line-height: 40px;
+  padding: 5px;
+  color: black;
+}
+
+input::-webkit-input-placeholder {
+  color: black;
+}
+
+textarea {
+  width: 915px;
+  color: black;
+  border: 1px solid black;
+  resize: none;
+  padding: 5px;
+}
+
+.button {
+  width: 150px;
+  padding: 5px;
+  line-height: 25px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 7px;
+}
