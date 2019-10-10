@@ -1,15 +1,15 @@
-.carousel {
+.iframes {
   padding: .3em .3em 0;
   background: rgb(240, 240, 240);
   text-align: center;
 }
 
-.carousel div {
+.iframes div {
   position: relative;
   margin-bottom: .3em;
 }
 
-.carousel span {
+.iframes span {
   display: inline-block;
   word-spacing: 1em;
   /* расстояние между картинками */
@@ -19,7 +19,7 @@
   word-wrap: normal;
 }
 
-.carousel a {
+.iframes a {
   position: relative;
   display: inline-block;
   max-width: 120px;
@@ -32,20 +32,20 @@
   text-decoration: none;
 }
 
-.carousel a:visited, .carousel a:nth-of-type(1) {
+.iframes a:visited, .iframes a:nth-of-type(1) {
   border-color: #555;
   /* рамка вокруг миниатюр просмотренных видео */
 }
 
-.carousel a:hover {
+.iframes a:hover {
   opacity: 1;
 }
 
-.carousel a:not(:active):focus {
+.iframes a:not(:active):focus {
   pointer-events: none;
 }
 
-.carousel a::before {
+.iframes a::before {
   content: "";
   position: absolute;
   top: 0em;
@@ -56,36 +56,36 @@
   transition: background 0s 9999999s;
 }
 
-.carousel span:active a::before {
+.iframes span:active a::before {
   background: rgba(0, 0, 0, 0);
   transition: background 0s;
 }
 
-.carousel span:active a:active::before {
+.iframes span:active a:active::before {
   border: 2px solid black;
   transition: background 0s;
 }
 
-.carousel img {
+.iframes img {
   max-width: 100%;
   vertical-align: middle;
   /* убрать нижний отступ до рамки под картинкой */
 }
 
-.com {
+.commentary {
   margin: 0 auto;
   margin-top: 150px;
   width: 915px;
 }
 
-.f_c {
+.first_commentary {
   border: 1px solid black;
   width: 915px;
   background: rgb(240, 240, 240);
   padding: 5px;
 }
 
-input[type="text"] {
+.nickname {
   width: 915px;
   border: 1px solid black;
   line-height: 40px;
@@ -97,7 +97,7 @@ input::-webkit-input-placeholder {
   color: black;
 }
 
-textarea {
+.text_commentary {
   width: 915px;
   color: black;
   border: 1px solid black;
